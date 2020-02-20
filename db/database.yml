@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: myapp_production
-  username: myapp
+  url: <%= ENV['DATABASE_URL'] %>
+  database: myapp
+  username: deploy
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
